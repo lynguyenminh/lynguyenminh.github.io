@@ -37,16 +37,16 @@ body {
     background-color: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
 }
 
 .nav-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0 2rem;
 }
 
 .logo {
@@ -58,10 +58,8 @@ body {
 
 .nav-links {
     display: flex;
-    list-style: none;
     gap: 2rem;
-    font-family: var(--font-primary);
-    font-weight: 500;
+    list-style: none;
 }
 
 .nav-links a {
@@ -172,6 +170,10 @@ body {
     color: var(--text-secondary);
     max-width: 600px;
     margin-bottom: 2rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .hero-image {
@@ -342,6 +344,17 @@ body {
 
 .timeline-company i {
     color: var(--secondary-color);
+}
+
+.timeline-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .timeline-description ul {
@@ -532,6 +545,10 @@ p, li, a {
     line-height: 1.8;
     color: var(--text-primary);
     margin-bottom: var(--space-4);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .about-philosophy {
@@ -541,6 +558,10 @@ p, li, a {
     margin-bottom: var(--space-4);
     padding-left: var(--space-3);
     border-left: 2px solid var(--secondary-color);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .about-highlights {
@@ -580,6 +601,10 @@ p, li, a {
     position: relative;
     display: flex;
     align-items: center;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .about-highlights li::before {
@@ -655,4 +680,93 @@ p, li, a {
     .about-highlights li {
         font-size: 0.9rem;
     }
+}
+
+/* Prizes and Awards Section */
+.prizes-awards {
+    padding: 100px 2rem;
+    background: transparent;
+}
+
+.prizes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prize-card {
+    background: rgba(10, 25, 47, 0.5);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.prize-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.prize-icon {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.prize-card h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.prize-card p {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.prize-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.prize-link:hover {
+    color: var(--secondary-color);
+}
+
+.prize-link i {
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .prizes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 1rem;
+    }
+}
+
+.about-description, 
+.timeline-description,
+.post-content p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+.timeline-description ul li,
+.about-highlights ul li {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 } 

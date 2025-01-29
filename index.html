@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ly Nguyen Minh's portfolio showcasing expertise in AI Engineering, Machine Learning, and System Optimization.">
+    <meta name="keywords" content="AI Engineer, Machine Learning, Portfolio, Ly Nguyen Minh">
     <title>Ly Nguyen Minh - AI Engineer Portfolio</title>
     
     <!-- SF Pro Font -->
@@ -11,226 +13,366 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/improvements.css">
     
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Defer non-critical scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/improvements.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">LNM</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="particle-background" id="particles-js"></div>
-        <div class="hero-content">
-            <h1 data-aos="fade-up">Ly Nguyen Minh</h1>
-            <div class="typed-container" data-aos="fade-up" data-aos-delay="200">
-                <span id="typed"></span>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#prizes-awards">Prizes & Awards</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <p class="tagline" data-aos="fade-up" data-aos-delay="400">
-                AI makes coding easier, but true value lies in a product-driven mindset.
-            </p>
-            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="600">
-                <a href="#projects" class="btn primary">View Portfolio</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="particle-background" id="particles-js"></div>
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Ly Nguyen Minh</h1>
+                <div class="typed-container" data-aos="fade-up" data-aos-delay="200">
+                    <span id="typed"></span>
+                </div>
+                <p class="tagline" data-aos="fade-up" data-aos-delay="400">
+                    AI makes coding easier, but true value lies in a product-driven mindset.
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#projects" class="btn primary">View Portfolio</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-right">
-                    <p class="about-description">
-                        Hi! I'm Ly Nguyen Minh, a Junior AI Engineer passionate about creating intelligent systems that make a real impact. With a strong foundation in both theoretical AI and practical implementation, I specialize in developing scalable AI solutions that bridge the gap between cutting-edge technology and real-world applications.
-                    </p>
-                    
-                    <p class="about-philosophy">
-                        "While AI makes coding easier, I believe the true value lies in understanding system optimization and creating products that solve real problems. My approach combines technical expertise with a product-driven mindset, focusing on delivering solutions that create tangible value."
-                    </p>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text" data-aos="fade-right">
+                        <h3>Introduction</h3>
+                        <p class="about-description">
+                            Hi! I'm Ly Nguyen Minh, a Junior AI Engineer passionate about creating intelligent systems that make a real impact. With a strong foundation in both theoretical AI and practical implementation, I specialize in developing scalable AI solutions that bridge the gap between cutting-edge technology and real-world applications.
+                        </p>
+                        
+                        <p class="about-philosophy">
+                            "While AI makes coding easier, I believe the true value lies in understanding system optimization and creating products that solve real problems. My approach combines technical expertise with a product-driven mindset, focusing on delivering solutions that create tangible value."
+                        </p>
 
-                    <div class="about-highlights">
-                        <h3>Key Expertise</h3>
-                        <ul>
-                            <li>Large Language Models</li>
-                            <li>Computer Vision Systems</li>
-                            <li>Translation Systems</li>
-                            <li>Performance Optimization</li>
-                            <li>Scalable Architecture</li>
-                            <li>Product Development</li>
-                            <li>System Integration</li>
-                            <li>AI Safety Systems</li>
-                        </ul>
+                        <div class="about-highlights">
+                            <h3>Key Expertise</h3>
+                            <ul>
+                                <li>Large Language Models</li>
+                                <li>Computer Vision Systems</li>
+                                <li>Translation Systems</li>
+                                <li>Performance Optimization</li>
+                                <li>Scalable Architecture</li>
+                                <li>Product Development</li>
+                                <li>System Integration</li>
+                                <li>AI Safety Systems</li>
+                            </ul>
+                        </div>
                     </div>
+                    
+                    <div class="about-image" data-aos="fade-left">
+                        <img src="assets/profile.jpg" alt="Ly Nguyen Minh - AI Engineer" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
+            <div class="timeline">
+                <!-- Most recent job -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="item-content">
+                        <div class="timeline-date">Jun 2024 - Present</div>
+                        <h3 class="timeline-title">Junior AI Engineer</h3>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i>
+                            <span>Thinkprompt</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed an LLM-based translation system serving 200K+ users</li>
+                                <li>Handled image-based document translation with structure preservation</li>
+                                <li>Enabled audio translation with character consistency</li>
+                                <li>Built real-time cabin translation system with <3s latency</li>
+                                <li>Designed scalable AI service architecture for parallel processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second most recent -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="item-content">
+                        <div class="timeline-date">Jan 2024 - Aug 2024</div>
+                        <h3 class="timeline-title">Junior AI Engineer</h3>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i>
+                            <span>viAct</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed AI safety alert systems for construction sites and airports</li>
+                                <li>Implemented efficient data management and algorithm design</li>
+                                <li>Optimized system to support 30-60 cameras on 32GB RAM, 32-core server with RTX 4090</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with other items in chronological order -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="item-content">
+                        <div class="timeline-date">Jun 2023 - Dec 2023</div>
+                        <h3 class="timeline-title">Fresher AI Engineer</h3>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i>
+                            <span>ProXGlobal</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Built image generation apps for various themes (Halloween, Christmas)</li>
+                                <li>Researched AI tech and developed trending apps within 1-2 weeks</li>
+                                <li>Designed high-performance, scalable APIs with load balancing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="item-content">
+                        <div class="timeline-date">Jun 2023 - Aug 2023</div>
+                        <h3 class="timeline-title">AI Bootcamp Mentee</h3>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i>
+                            <span>Cinnamon AI</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Trained in essential AI Engineer skills: Research, Data Management, Generative AI</li>
+                                <li>Developed Translation and Template Recovery PDF project</li>
+                                <li>Ranked 2/5 projects in the Bootcamp 2023</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="item-content">
+                        <div class="timeline-date">Oct 2020 - Present</div>
+                        <h3 class="timeline-title">Bachelor's Degree in Artificial Intelligence</h3>
+                        <div class="timeline-company">
+                            <i class="fas fa-university"></i>&nbsp; 
+                            <span>VNUHCM - University of Information Technology</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Major in Artificial Intelligence</li>
+                                <li>Current GPA: 8.61 / 10</li>
+                                <li>2 times receiving UIT scholarships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prizes and Awards Section -->
+        <section id="prizes-awards" class="prizes-awards">
+            <h2 class="section-title" data-aos="fade-up">Prizes and Awards</h2>
+            <div class="prizes-grid">
+                <!-- HCM AI Challenge 2021 -->
+                <div class="prize-card" data-aos="fade-up">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>HCM AI Challenge 2021</h3>
+                    <p>Top 4</p>
+                    <a href="blog/hcm-ai-challenge-2021.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- UIT Racing Car 2021 -->
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>UIT Racing Car 2021</h3>
+                    <p>Top 3</p>
+                    <a href="blog/uit-racing-car-2021.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Oraichain Hackathon 2023 -->
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Oraichain Hackathon 2023</h3>
+                    <p>Top 4</p>
+                    <a href="blog/oraichain-hackathon-2023.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- SOICT Hackathon 2023 -->
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>SOICT Hackathon 2023</h3>
+                    <p>Top 3</p>
+                    <a href="blog/soict-hackathon-2023.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- NESTQUANT Tournament 2023 -->
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>NESTQUANT Tournament 2023</h3>
+                    <p>Top 3</p>
+                    <a href="blog/nestquant-tournament-2023.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- BKAI-NAVER Challenge 2022 -->
+                <div class="prize-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="prize-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>BKAI-NAVER Challenge 2022</h3>
+                    <p>Top 4</p>
+                    <a href="blog/bkai-naver-challenge-2022.html" class="prize-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title" data-aos="fade-up">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Node.js</li>
+                    </ul>
                 </div>
                 
-                <div class="about-image" data-aos="fade-left">
-                    <img src="assets/profile.jpg" alt="Ly Nguyen Minh - AI Engineer">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>ML/AI</h3>
+                    <ul class="skill-list">
+                        <li>OpenCV</li>
+                        <li>PyTorch</li>
+                        <li>TensorFlow</li>
+                    </ul>
                 </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Engineering</h3>
+                    <ul class="skill-list">
+                        <li>FastAPI</li>
+                        <li>Celery</li>
+                        <li>MinIO</li>
+                        <li>PostgreSQL</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Generative AI</h3>
+                    <ul class="skill-list">
+                        <li>Prompt Engineering</li>
+                        <li>LLM API</li>
+                        <li>RAG</li>
+                        <li>Agent Development</li>
+                        <li>Stable Diffusion</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <!-- Content will be added -->
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ly Nguyen Minh. All rights reserved.</p>
+            <div class="social-links">
+                <!-- Add your social media links here -->
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
-        <div class="timeline">
-            <!-- Most recent job -->
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="item-content">
-                    <div class="timeline-date">Jun 2024 - Present</div>
-                    <h3 class="timeline-title">Junior AI Engineer</h3>
-                    <div class="timeline-company">
-                        <i class="fas fa-building"></i>
-                        <span>Thinkprompt</span>
-                    </div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Developed an LLM-based translation system serving 200K+ users</li>
-                            <li>Handled image-based document translation with structure preservation</li>
-                            <li>Enabled audio translation with character consistency</li>
-                            <li>Built real-time cabin translation system with <3s latency</li>
-                            <li>Designed scalable AI service architecture for parallel processing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second most recent -->
-            <div class="timeline-item" data-aos="fade-left">
-                <div class="item-content">
-                    <div class="timeline-date">Jan 2024 - Aug 2024</div>
-                    <h3 class="timeline-title">Junior AI Engineer</h3>
-                    <div class="timeline-company">
-                        <i class="fas fa-building"></i>
-                        <span>viAct</span>
-                    </div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Developed AI safety alert systems for construction sites and airports</li>
-                            <li>Implemented efficient data management and algorithm design</li>
-                            <li>Optimized system to support 30-60 cameras on 32GB RAM, 32-core server with RTX 4090</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Continue with other items in chronological order -->
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="item-content">
-                    <div class="timeline-date">Jun 2023 - Dec 2023</div>
-                    <h3 class="timeline-title">Fresher AI Engineer</h3>
-                    <div class="timeline-company">
-                        <i class="fas fa-building"></i>
-                        <span>ProXGlobal</span>
-                    </div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Built image generation apps for various themes (Halloween, Christmas)</li>
-                            <li>Researched AI tech and developed trending apps within 1-2 weeks</li>
-                            <li>Designed high-performance, scalable APIs with load balancing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" data-aos="fade-left">
-                <div class="item-content">
-                    <div class="timeline-date">Jun 2023 - Aug 2023</div>
-                    <h3 class="timeline-title">AI Bootcamp Mentee</h3>
-                    <div class="timeline-company">
-                        <i class="fas fa-building"></i>
-                        <span>Cinnamon AI</span>
-                    </div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Trained in essential AI Engineer skills: Research, Data Management, Generative AI</li>
-                            <li>Developed Translation and Template Recovery PDF project</li>
-                            <li>Ranked 2/5 projects in the Bootcamp 2023</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 class="section-title" data-aos="fade-up">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category" data-aos="fade-up">
-                <h3>Programming Languages</h3>
-                <ul class="skill-list">
-                    <li>Python</li>
-                    <li>Node.js</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                <h3>ML/AI</h3>
-                <ul class="skill-list">
-                    <li>OpenCV</li>
-                    <li>PyTorch</li>
-                    <li>TensorFlow</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                <h3>Engineering</h3>
-                <ul class="skill-list">
-                    <li>FastAPI</li>
-                    <li>Celery</li>
-                    <li>MinIO</li>
-                    <li>PostgreSQL</li>
-                    <li>Microservices</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                <h3>Generative AI</h3>
-                <ul class="skill-list">
-                    <li>Prompt Engineering</li>
-                    <li>LLM API</li>
-                    <li>RAG</li>
-                    <li>Agent Development</li>
-                    <li>Stable Diffusion</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <!-- Content will be added -->
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <!-- Content will be added -->
-    </section>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html> 
