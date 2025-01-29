@@ -64,8 +64,9 @@ body {
 }
 
 .logo img {
-    height: 40px;
-    width: 40px;
+    max-height: 50px;
+    width: auto;
+    display: block;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -186,6 +187,10 @@ body {
         padding: 1rem;
         width: 100%;
         text-align: center;
+    }
+
+    .logo img {
+        max-height: 40px;
     }
 }
 
