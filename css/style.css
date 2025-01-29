@@ -4,6 +4,11 @@
     --secondary-color: #64ffda;
     --text-primary: #ccd6f6;
     --text-secondary: #8892b0;
+    --bg-primary: #0a192f;
+    --bg-secondary: rgba(10, 25, 47, 0.85);
+    --bg-card: rgba(10, 25, 47, 0.5);
+    --border-color: rgba(100, 255, 218, 0.1);
+    --shadow-color: rgba(2, 12, 27, 0.7);
     --transition: all 0.3s ease;
     --font-primary: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     --font-secondary: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -23,7 +28,7 @@
 
 body {
     font-family: var(--font-primary);
-    background-color: var(--primary-color);
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
 }
@@ -34,7 +39,7 @@ body {
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(10, 25, 47, 0.85);
+    background-color: var(--bg-secondary);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 2rem;
@@ -289,11 +294,11 @@ body {
 
 .timeline-item .item-content {
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    background: rgba(10, 25, 47, 0.5);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
     padding: 2rem 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    box-shadow: 0 10px 30px -15px var(--shadow-color);
     transition: all 0.3s ease-out;
     position: relative;
     min-width: 400px;
@@ -301,11 +306,11 @@ body {
 
 .timeline-item:hover .item-content {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.8);
+    box-shadow: 0 20px 40px -15px var(--shadow-color);
     background: linear-gradient(
         145deg,
-        rgba(10, 25, 47, 0.7),
-        rgba(10, 25, 47, 0.4)
+        var(--bg-card),
+        var(--bg-card)
     );
 }
 
@@ -335,7 +340,7 @@ body {
 }
 
 .timeline-company {
-    background: rgba(100, 255, 218, 0.1);
+    background: var(--border-color);
     padding: var(--space-2);
     border-radius: 4px;
     display: inline-flex;
@@ -386,7 +391,7 @@ body {
 .tech-tag {
     font-size: 0.8rem;
     padding: 4px 8px;
-    background: rgba(100, 255, 218, 0.1);
+    background: var(--border-color);
     border-radius: 4px;
     color: var(--secondary-color);
 }
@@ -394,7 +399,7 @@ body {
 /* Skills Section */
 .skills {
     padding: 100px 2rem;
-    background-color: rgba(10, 25, 47, 0.5);
+    background-color: var(--bg-card);
 }
 
 .skills-container {
@@ -407,11 +412,11 @@ body {
 .skill-category {
     background: linear-gradient(
         135deg,
-        rgba(10, 25, 47, 0.9),
-        rgba(10, 25, 47, 0.7)
+        var(--bg-card),
+        var(--bg-card)
     );
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1px solid var(--border-color);
     width: 100%;
     height: 100%;
     min-height: 200px;
@@ -422,7 +427,7 @@ body {
 
 .skill-category:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
+    box-shadow: 0 4px 12px var(--border-color);
 }
 
 .skill-category h3 {
@@ -452,7 +457,7 @@ body {
 .skill-progress {
     flex: 1;
     height: 4px;
-    background: rgba(100, 255, 218, 0.1);
+    background: var(--border-color);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -466,10 +471,12 @@ body {
 /* Font settings */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
+    color: var(--text-primary);
 }
 
 p, li, a {
     font-family: var(--font-secondary);
+    color: var(--text-secondary);
 }
 
 /* Responsive Updates */
@@ -521,7 +528,7 @@ p, li, a {
 /* About Section Styles */
 .about {
     padding: 100px 2rem;
-    background-color: rgba(10, 25, 47, 0.5);
+    background-color: var(--bg-card);
 }
 
 .about-content {
@@ -697,8 +704,8 @@ p, li, a {
 }
 
 .prize-card {
-    background: rgba(10, 25, 47, 0.5);
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
@@ -708,7 +715,7 @@ p, li, a {
 
 .prize-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    box-shadow: 0 10px 30px -15px var(--shadow-color);
 }
 
 .prize-icon {
@@ -724,7 +731,7 @@ p, li, a {
 }
 
 .prize-card p {
-    color: var(--secondary-color);
+    color: var(--text-secondary);
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -769,4 +776,39 @@ p, li, a {
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
+}
+
+/* Thêm style cho body để đảm bảo màu nền chính */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Đảm bảo navbar có màu nền đúng */
+.navbar {
+    background-color: var(--bg-secondary);
+    backdrop-filter: blur(10px);
+}
+
+/* Đảm bảo các card và section có màu nền đúng */
+.skill-category,
+.timeline-item .item-content,
+.prize-card,
+.blog-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+/* Đảm bảo text có màu đúng */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* Đảm bảo các link có màu đúng */
+a {
+    color: var(--secondary-color);
 } 
