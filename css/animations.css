@@ -242,4 +242,35 @@ html {
     .prize-content h3 {
         font-size: 1.1rem;
     }
+}
+
+/* Add new styles for features_lv2 container */
+.features-lv2-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+/* Tăng độ ưu tiên của selector và đảm bảo width 50% */
+.features-lv2-container .featured-secondary {
+    width: 50% !important; /* Sử dụng !important tạm thời để debug */
+    min-width: 50%;
+    flex: 1 1 50%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .features-lv2-container {
+        flex-direction: column;
+    }
+    
+    .features-lv2-container .featured-secondary {
+        width: 100% !important;
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
 } 

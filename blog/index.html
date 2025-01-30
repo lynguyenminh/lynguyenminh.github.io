@@ -25,9 +25,11 @@
         }
         
         .featured-secondary {
-            flex: 0 0 calc(50% - 1rem);
+            flex: 1 1 calc(50% - 1rem);
+            width: calc(50% - 1rem);
+            min-width: calc(50% - 1rem);
             max-width: calc(50% - 1rem);
-            min-width: 0;
+            box-sizing: border-box;
         }
 
         .post-meta {
@@ -122,9 +124,10 @@
 
         <!-- Featured Posts Section -->
         <section class="featured-posts">
-            <h2>Featured Posts</h2>
+            <h2>Latest Posts</h2>
+            
+            <!-- Main Featured Post -->
             <div class="featured-grid">
-                <!-- Main Featured Post -->
                 <article class="featured-main" id="feature-main">
                     <div class="featured-image">
                         <img src="" alt="Featured Post">
@@ -138,17 +141,17 @@
                         <p>A detailed look at my experience participating in the competition, including technical challenges, solutions, and lessons learned...</p>
                     </div>
                 </article>
+            </div>
 
-                <!-- Secondary Featured Posts -->
-                <div id="features-secondary">
-                    <!-- Secondary posts will be inserted here by JavaScript -->
-                </div>
+            <!-- Secondary Featured Posts (Tách riêng) -->
+            <div id="features-secondary">
+                <!-- Secondary posts will be inserted here by JavaScript -->
             </div>
         </section>
 
         <!-- Latest Posts Section -->
         <section class="latest-posts">
-            <h2>Latest Posts</h2>
+            <h2>Featured Posts</h2>
             <div class="blog-grid" id="latest-posts">
                 <!-- Latest posts will be inserted here by JavaScript -->
             </div>
