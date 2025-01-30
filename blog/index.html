@@ -11,9 +11,25 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="../css/improvements.css">
+    <link rel="stylesheet" href="../css/blog-layout.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #features-secondary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        
+        .featured-secondary {
+            flex: 0 0 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
+            min-width: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -58,131 +74,32 @@
             <h2>Featured Posts</h2>
             <div class="featured-grid">
                 <!-- Main Featured Post -->
-                <article class="featured-main" onclick="window.location.href='hcm-ai-challenge-2021.html'">
+                <article class="featured-main" id="feature-main">
                     <div class="featured-image">
-                        <img src="../assets/blog/hcm-ai-challenge-2021.jpg" alt="HCM AI Challenge 2021">
+                        <img src="" alt="Featured Post">
                     </div>
                     <div class="featured-content">
                         <div class="post-meta">
-                            <span class="post-date">December 30, 2021</span>
                             <span class="post-category">Competition</span>
                             <span class="read-time">5 min read</span>
                         </div>
-                        <h3>HCM AI Challenge 2021: My Journey to Top 4</h3>
-                        <p>A detailed look at my experience participating in the HCM AI Challenge 2021, including technical challenges, solutions, and lessons learned...</p>
+                        <h3><a href=""></a></h3>
+                        <p>A detailed look at my experience participating in the competition, including technical challenges, solutions, and lessons learned...</p>
                     </div>
                 </article>
 
                 <!-- Secondary Featured Posts -->
-                <article class="featured-secondary" onclick="window.location.href='uit-racing-car-2021.html'">
-                    <div class="featured-image">
-                        <img src="../assets/blog/uit-racing-car-2021.jpg" alt="UIT Racing Car 2021">
-                    </div>
-                    <div class="featured-content">
-                        <div class="post-meta">
-                            <span class="post-date">November 15, 2021</span>
-                            <span class="post-category">Competition</span>
-                        </div>
-                        <h3>UIT Racing Car 2021: Securing Top 3</h3>
-                        <a href="uit-racing-car-2021.html" class="read-more">Read More</a>
-                    </div>
-                </article>
-
-                <article class="featured-secondary" onclick="window.location.href='oraichain-hackathon-2023.html'">
-                    <div class="featured-image">
-                        <img src="../assets/blog/oraichain-hackathon-2023.jpg" alt="Oraichain Hackathon 2023">
-                    </div>
-                    <div class="featured-content">
-                        <div class="post-meta">
-                            <span class="post-date">July 20, 2023</span>
-                            <span class="post-category">Hackathon</span>
-                        </div>
-                        <h3>Oraichain Hackathon 2023: Innovation in AI</h3>
-                        <a href="oraichain-hackathon-2023.html" class="read-more">Read More</a>
-                    </div>
-                </article>
+                <div id="features-secondary">
+                    <!-- Secondary posts will be inserted here by JavaScript -->
+                </div>
             </div>
         </section>
 
         <!-- Latest Posts Section -->
         <section class="latest-posts">
             <h2>Latest Posts</h2>
-            <div class="blog-grid">
-                <!-- Blog Post Cards -->
-                <article class="blog-card" onclick="window.location.href='nestquant-tournament-2023.html'">
-                    <div class="blog-card-image">
-                        <img src="../assets/blog/nestquant-tournament-2023.jpg" alt="NESTQUANT Tournament 2023">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">August 15, 2023</span>
-                            <span class="blog-category">Competition</span>
-                        </div>
-                        <h3>NESTQUANT Tournament 2023: Top 3 Achievement</h3>
-                        <p>Exploring quantitative trading strategies and machine learning applications in finance...</p>
-                        <a href="nestquant-tournament-2023.html" class="read-more">Read More</a>
-                    </div>
-                </article>
-
-                <article class="blog-card" onclick="window.location.href='soict-hackathon-2023.html'">
-                    <div class="blog-card-image">
-                        <img src="../assets/blog/soict-hackathon-2023.jpg" alt="SOICT Hackathon 2023">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">September 15, 2023</span>
-                            <span class="blog-category">Hackathon</span>
-                        </div>
-                        <h3>SOICT Hackathon 2023: Journey to Top 3</h3>
-                        <p>Innovative solutions and technical challenges at SOICT Hackathon 2023...</p>
-                        <a href="soict-hackathon-2023.html" class="read-more">Read More</a>
-                    </div>
-                </article>
-
-                <article class="blog-card" onclick="window.location.href='bkai-naver-challenge-2022.html'">
-                    <div class="blog-card-image">
-                        <img src="../assets/blog/bkai-naver-challenge-2022.jpg" alt="BKAI-NAVER Challenge 2022">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">November 15, 2022</span>
-                            <span class="blog-category">Competition</span>
-                        </div>
-                        <h3>BKAI-NAVER Challenge 2022: Top 4 Achievement</h3>
-                        <p>Deep learning solutions for real-world AI challenges...</p>
-                        <a href="bkai-naver-challenge-2022.html" class="read-more">Read More</a>
-                    </div>
-                </article>
-
-                <article class="blog-card" onclick="window.location.href='uit-ai-challenge-2022.html'">
-                    <div class="blog-card-image">
-                        <img src="../assets/blog/uit-ai-challenge-2022.jpg" alt="UIT AI Challenge 2022">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">October 15, 2022</span>
-                            <span class="blog-category">Competition</span>
-                        </div>
-                        <h3>UIT AI Challenge 2022: Securing Top 4</h3>
-                        <p>Machine learning competition insights and technical approach...</p>
-                        <a href="uit-ai-challenge-2022.html" class="read-more">Read More</a>
-                    </div>
-                </article>
-
-                <article class="blog-card" onclick="window.location.href='uit-scholarships.html'">
-                    <div class="blog-card-image">
-                        <img src="../assets/blog/uit-scholarships.jpg" alt="UIT Scholarships">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">December 30, 2022</span>
-                            <span class="blog-category">Achievement</span>
-                        </div>
-                        <h3>UIT Academic Excellence: Two-Time Scholarship Recipient</h3>
-                        <p>My academic journey and achievements at UIT...</p>
-                        <a href="uit-scholarships.html" class="read-more">Read More</a>
-                    </div>
-                </article>
+            <div class="blog-grid" id="latest-posts">
+                <!-- Latest posts will be inserted here by JavaScript -->
             </div>
         </section>
     </main>
@@ -193,6 +110,84 @@
         </div>
     </footer>
 
+    <script>
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('../assets/blog-config.json');
+                const data = await response.json();
+                
+                // Load main feature (features_lv1)
+                const mainFeature = document.getElementById('feature-main');
+                const mainPost = data.features_lv1;
+                if (mainFeature) {
+                    const mainImage = mainFeature.querySelector('img');
+                    if (mainImage) {
+                        mainImage.src = mainPost.image;
+                        mainImage.alt = mainPost.title;
+                    }
+                    const mainLink = mainFeature.querySelector('h3 a');
+                    if (mainLink) {
+                        mainLink.href = mainPost.path;
+                        mainLink.textContent = mainPost.title;
+                    }
+                }
+
+                // Load secondary features (features_lv2)
+                const secondaryContainer = document.getElementById('features-secondary');
+                if (secondaryContainer) {
+                    secondaryContainer.innerHTML = ''; // Clear existing content
+                    data.features_lv2.forEach(post => {
+                        const article = `
+                            <article class="featured-secondary">
+                                <div class="featured-image">
+                                    <img src="${post.image}" alt="${post.title}" style="width: 100%; height: auto;">
+                                </div>
+                                <div class="featured-content">
+                                    <div class="post-meta">
+                                        <span class="post-category">Competition</span>
+                                    </div>
+                                    <h3><a href="${post.path}">${post.title}</a></h3>
+                                    <a href="${post.path}" class="read-more">Read More</a>
+                                </div>
+                            </article>
+                        `;
+                        secondaryContainer.insertAdjacentHTML('beforeend', article);
+                    });
+                }
+
+                // Load latest posts (latest_lv3) - chỉ hiển thị đúng 3 bài từ config
+                const latestContainer = document.getElementById('latest-posts');
+                if (latestContainer) {
+                    latestContainer.innerHTML = ''; // Clear existing content
+                    // Đảm bảo chỉ lấy đúng số bài viết trong config
+                    const latestPosts = data.latest_lv3;
+                    latestPosts.forEach(post => {
+                        const article = `
+                            <article class="blog-card">
+                                <div class="blog-card-image">
+                                    <img src="${post.image}" alt="${post.title}">
+                                </div>
+                                <div class="blog-card-content">
+                                    <div class="blog-card-meta">
+                                        <span class="blog-category">Competition</span>
+                                    </div>
+                                    <h3><a href="${post.path}">${post.title}</a></h3>
+                                    <p>Exploring technical challenges and solutions...</p>
+                                    <a href="${post.path}" class="read-more">Read More</a>
+                                </div>
+                            </article>
+                        `;
+                        latestContainer.insertAdjacentHTML('beforeend', article);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+            }
+        }
+
+        // Load posts when the page loads
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+    </script>
     <script src="../js/improvements.js" defer></script>
 </body>
 </html> 

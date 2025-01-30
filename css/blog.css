@@ -451,4 +451,27 @@
     .subscription-form button {
         width: 100%;
     }
+}
+
+/* Styling for features level 2 posts */
+.features-lv2 {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.features-lv2 .blog-card {
+    flex: 0 0 calc(50% - 1rem); /* Chiếm 50% chiều rộng trừ đi khoảng gap */
+    margin: 0;
+}
+
+/* Đảm bảo responsive trên mobile */
+@media (max-width: 768px) {
+    .features-lv2 {
+        flex-direction: column;
+    }
+    
+    .features-lv2 .blog-card {
+        flex: 0 0 100%;
+    }
 } 

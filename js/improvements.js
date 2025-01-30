@@ -124,9 +124,90 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Initialize all improvements
+async function loadBlogPosts() {
+    try {
+        const response = await fetch('../assets/blog-config.json');
+        const data = await response.json();
+
+        // Hàm helper để chuyển đổi đường dẫn
+        const fixPath = (path) => {
+            // Chuyển "./blog/something.html" thành "./something.html"
+            return path.replace('./blog/', './');
+        };
+
+        // Hàm helper để chuyển đổi đường dẫn ảnh
+        const fixImagePath = (path) => {
+            // Chuyển "./assets/..." thành "../assets/..."
+            return path.replace('./assets/', '../assets/');
+        };
+
+        // Load featured main post
+        const featuredMain = document.querySelector('.featured-main');
+        if (featuredMain && data.features_lv1) {
+            const post = data.features_lv1;
+            featuredMain.onclick = () => window.location.href = fixPath(post.path);
+            featuredMain.querySelector('.featured-image img').src = fixImagePath(post.image);
+            featuredMain.querySelector('.featured-image img').alt = post.title;
+            featuredMain.querySelector('h3').textContent = post.title;
+            featuredMain.querySelector('.post-date').textContent = new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Load secondary featured posts
+        const featuredSecondary = document.querySelectorAll('.featured-secondary');
+        if (featuredSecondary && data.features_lv2) {
+            data.features_lv2.forEach((post, index) => {
+                if (featuredSecondary[index]) {
+                    const element = featuredSecondary[index];
+                    element.onclick = () => window.location.href = fixPath(post.path);
+                    element.querySelector('.featured-image img').src = fixImagePath(post.image);
+                    element.querySelector('.featured-image img').alt = post.title;
+                    element.querySelector('h3').textContent = post.title;
+                    element.querySelector('.post-date').textContent = new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                }
+            });
+        }
+
+        // Load latest posts
+        const latestPosts = document.querySelectorAll('.blog-card');
+        if (latestPosts && data.latest_lv3) {
+            data.latest_lv3.forEach((post, index) => {
+                if (latestPosts[index]) {
+                    const element = latestPosts[index];
+                    element.onclick = () => window.location.href = fixPath(post.path);
+                    element.querySelector('.blog-card-image img').src = fixImagePath(post.image);
+                    element.querySelector('.blog-card-image img').alt = post.title;
+                    element.querySelector('h3').textContent = post.title;
+                    element.querySelector('.blog-date').textContent = new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                }
+            });
+        }
+
+        // Add cursor pointer to all clickable articles
+        document.querySelectorAll('.featured-main, .featured-secondary, .blog-card').forEach(article => {
+            article.style.cursor = 'pointer';
+        });
+
+    } catch (error) {
+        console.error('Error loading blog posts:', error);
+    }
+}
+
+// Call the function when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initBackToTop();
     initFormValidation();
+    loadBlogPosts();
 }); 

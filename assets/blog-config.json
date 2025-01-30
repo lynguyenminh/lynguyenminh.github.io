@@ -1,0 +1,36 @@
+{
+    "features_lv1": {
+        "path": "/blog/hcm-ai-challenge-2021.html",
+        "title": "HCM AI Challenge 2021",
+        "image": "../assets/profile.jpg"
+    },
+    "features_lv2": [
+        {
+            "path": "/blog/bkai-naver-challenge-2022.html",
+            "title": "BKAI-NAVER Challenge 2022",
+            "image": "../assets/profile.jpg"
+        },
+        {
+            "path": "/blog/nestquant-tournament-2023.html",
+            "title": "NestQuant Tournament 2023",
+            "image": "../assets/profile.jpg"
+        }
+    ],
+    "latest_lv3": [
+        {
+            "path": "/blog/hcm-ai-challenge-2022.html",
+            "title": "HCM AI Challenge 2022",
+            "image": "../assets/profile.jpg"
+        },
+        {
+            "path": "/blog/nestquant-tournament-2023.html",
+            "title": "NestQuant Tournament 2023",
+            "image": "../assets/profile.jpg"
+        },
+        {
+            "path": "/blog/bkai-naver-challenge-2022.html",
+            "title": "BKAI-NAVER Challenge 2022",
+            "image": "../assets/profile.jpg"
+        }
+    ]
+}
