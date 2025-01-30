@@ -307,98 +307,77 @@ body {
     color: var(--text-primary);
     margin-bottom: 3rem;
     text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.section-title:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.section-title:hover::after {
+    width: 100px;
 }
 
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--secondary-color), rgba(100, 255, 218, 0.2));
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-    animation: line-pulse 3s infinite;
-}
-
-@keyframes line-pulse {
-    0% { opacity: 0.4; }
-    50% { opacity: 1; }
-    100% { opacity: 0.4; }
+    display: none;
 }
 
 .timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 55%;
+    width: 100%;
     margin-bottom: 30px;
-}
-
-/* Left items */
-.timeline-item:nth-child(odd) {
-    left: 0;
-    padding-right: 60px;
-}
-
-/* Right items */
-.timeline-item:nth-child(even) {
-    left: 45%;
-    padding-left: 60px;
-}
-
-/* Dots positioning */
-.timeline-item:nth-child(odd)::after {
-    right: -8px;
-}
-
-.timeline-item:nth-child(even)::after {
-    left: -8px;
-}
-
-.timeline-item .item-content {
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-card);
-    padding: 2rem 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px -15px var(--shadow-color);
-    transition: all 0.3s ease-out;
-    position: relative;
-    min-width: 400px;
-}
-
-.timeline-item:hover .item-content {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px -15px var(--shadow-color);
-    background: linear-gradient(
-        145deg,
-        var(--bg-card),
-        var(--bg-card)
-    );
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
     transition: all 0.3s ease;
 }
 
-.timeline-item:hover::after {
-    transform: translateY(-50%) scale(1.2);
-    box-shadow: 0 0 25px rgba(100, 255, 218, 0.6);
+.item-content {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px -15px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+/* Thêm hiệu ứng hover cho từng mục */
+.timeline-item:hover .item-content {
+    transform: scale(1.05) translateX(-10px); /* Phóng to 5% và di chuyển sang trái 10px */
+    background: var(--bg-secondary); /* Làm đậm màu nền khi hover */
+    border-color: var(--secondary-color); /* Đổi màu viền khi hover */
+}
+
+/* Thêm hiệu ứng cho các phần tử con khi hover */
+.timeline-item:hover .timeline-date {
+    color: var(--secondary-color);
+}
+
+.timeline-item:hover .timeline-title {
+    color: var(--secondary-color);
+}
+
+/* Đảm bảo animation mượt mà */
+.timeline-date,
+.timeline-title {
+    transition: color 0.3s ease;
 }
 
 .timeline-date {
@@ -565,26 +544,12 @@ p, li, a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .timeline::after {
-        left: 31px;
+    .timeline {
+        padding: 10px;
     }
     
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    
-    .timeline-item .item-content {
-        min-width: unset;
+    .item-content {
         padding: 1.5rem;
-    }
-    
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        left: 0;
-        padding-left: 70px;
-        padding-right: 25px;
     }
 }
 
