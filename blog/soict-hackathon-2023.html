@@ -15,7 +15,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- ... existing header and navigation code ... -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="Ly Nguyen Minh Logo">
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search...">
+                </div>
+
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <main class="blog-post">
         <article>
@@ -44,7 +70,11 @@
         </div>
     </main>
 
-    <!-- ... existing footer code ... -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ly Nguyen Minh. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="../js/improvements.js" defer></script>
 </body>
