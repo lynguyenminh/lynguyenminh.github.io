@@ -350,12 +350,53 @@ body {
 }
 
 .item-content {
+    position: relative;
+    padding-top: 3rem;
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px -15px var(--shadow-color);
     transition: all 0.3s ease;
+}
+
+.timeline-date {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--bg-primary);
+    color: var(--secondary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+.timeline-title {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeline-company {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    background: transparent;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.timeline-company i {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
 }
 
 /* Thêm hiệu ứng hover cho từng mục */
@@ -367,36 +408,23 @@ body {
 
 /* Thêm hiệu ứng cho các phần tử con khi hover */
 .timeline-item:hover .timeline-date {
-    color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: var(--bg-primary);
+    border-color: var(--secondary-color);
 }
 
 .timeline-item:hover .timeline-title {
     color: var(--secondary-color);
 }
 
+.timeline-item:hover .timeline-company {
+    color: var(--text-primary);
+}
+
 /* Đảm bảo animation mượt mà */
 .timeline-date,
 .timeline-title {
     transition: color 0.3s ease;
-}
-
-.timeline-date {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.timeline-company {
-    background: var(--border-color);
-    padding: var(--space-2);
-    border-radius: 4px;
-    display: inline-flex;
-    margin-bottom: var(--space-3);
-}
-
-.timeline-company i {
-    color: var(--secondary-color);
 }
 
 .timeline-description {
@@ -549,7 +577,15 @@ p, li, a {
     }
     
     .item-content {
-        padding: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .timeline-date {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        margin-bottom: 1rem;
     }
 }
 
