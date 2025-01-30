@@ -29,6 +29,57 @@
             max-width: calc(50% - 1rem);
             min-width: 0;
         }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .post-category {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .post-date {
+            color: #666;
+        }
+
+        .read-time {
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .read-time::before {
+            content: '🕒';
+            margin-right: 0.25rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        .blog-card, .featured-secondary {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .blog-card:hover, .featured-secondary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -116,76 +167,74 @@
                 const response = await fetch('../assets/blog-config.json');
                 const data = await response.json();
                 
-                // Load main feature (features_lv1)
+                // Load main feature
                 const mainFeature = document.getElementById('feature-main');
                 const mainPost = data.features_lv1;
                 if (mainFeature) {
-                    const mainImage = mainFeature.querySelector('img');
-                    if (mainImage) {
-                        mainImage.src = mainPost.image;
-                        mainImage.alt = mainPost.title;
-                    }
-                    const mainLink = mainFeature.querySelector('h3 a');
-                    if (mainLink) {
-                        mainLink.href = mainPost.path;
-                        mainLink.textContent = mainPost.title;
-                    }
+                    mainFeature.innerHTML = `
+                        <div class="featured-image">
+                            <img src="${mainPost.image}" alt="${mainPost.title}">
+                        </div>
+                        <div class="featured-content">
+                            <div class="post-meta">
+                                <span class="post-category">${mainPost.type}</span>
+                                <span class="post-date">${mainPost.date}</span>
+                                <span class="read-time">${mainPost.read_time}</span>
+                            </div>
+                            <h3><a href="${mainPost.path}">${mainPost.title}</a></h3>
+                            <p>A detailed look at my experience participating in the competition, including technical challenges, solutions, and lessons learned...</p>
+                            <a href="${mainPost.path}" class="read-more">Read Full Article</a>
+                        </div>
+                    `;
                 }
 
-                // Load secondary features (features_lv2)
+                // Load secondary features
                 const secondaryContainer = document.getElementById('features-secondary');
                 if (secondaryContainer) {
-                    secondaryContainer.innerHTML = ''; // Clear existing content
-                    data.features_lv2.forEach(post => {
-                        const article = `
-                            <article class="featured-secondary">
-                                <div class="featured-image">
-                                    <img src="${post.image}" alt="${post.title}" style="width: 100%; height: auto;">
+                    secondaryContainer.innerHTML = data.features_lv2.map(post => `
+                        <article class="featured-secondary">
+                            <div class="featured-image">
+                                <img src="${post.image}" alt="${post.title}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="post-meta">
+                                    <span class="post-category">${post.type}</span>
+                                    <span class="post-date">${post.date}</span>
+                                    <span class="read-time">${post.read_time}</span>
                                 </div>
-                                <div class="featured-content">
-                                    <div class="post-meta">
-                                        <span class="post-category">Competition</span>
-                                    </div>
-                                    <h3><a href="${post.path}">${post.title}</a></h3>
-                                    <a href="${post.path}" class="read-more">Read More</a>
-                                </div>
-                            </article>
-                        `;
-                        secondaryContainer.insertAdjacentHTML('beforeend', article);
-                    });
+                                <h3><a href="${post.path}">${post.title}</a></h3>
+                                <a href="${post.path}" class="read-more">Read Article</a>
+                            </div>
+                        </article>
+                    `).join('');
                 }
 
-                // Load latest posts (latest_lv3) - chỉ hiển thị đúng 3 bài từ config
+                // Load latest posts
                 const latestContainer = document.getElementById('latest-posts');
                 if (latestContainer) {
-                    latestContainer.innerHTML = ''; // Clear existing content
-                    // Đảm bảo chỉ lấy đúng số bài viết trong config
-                    const latestPosts = data.latest_lv3;
-                    latestPosts.forEach(post => {
-                        const article = `
-                            <article class="blog-card">
-                                <div class="blog-card-image">
-                                    <img src="${post.image}" alt="${post.title}">
+                    latestContainer.innerHTML = data.latest_lv3.map(post => `
+                        <article class="blog-card">
+                            <div class="blog-card-image">
+                                <img src="${post.image}" alt="${post.title}">
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    <span class="blog-category">${post.type}</span>
+                                    <span class="post-date">${post.date}</span>
+                                    <span class="read-time">${post.read_time}</span>
                                 </div>
-                                <div class="blog-card-content">
-                                    <div class="blog-card-meta">
-                                        <span class="blog-category">Competition</span>
-                                    </div>
-                                    <h3><a href="${post.path}">${post.title}</a></h3>
-                                    <p>Exploring technical challenges and solutions...</p>
-                                    <a href="${post.path}" class="read-more">Read More</a>
-                                </div>
-                            </article>
-                        `;
-                        latestContainer.insertAdjacentHTML('beforeend', article);
-                    });
+                                <h3><a href="${post.path}">${post.title}</a></h3>
+                                <p>Exploring technical challenges and solutions in ${post.type.toLowerCase()}...</p>
+                                <a href="${post.path}" class="read-more">Read Article</a>
+                            </div>
+                        </article>
+                    `).join('');
                 }
             } catch (error) {
                 console.error('Error loading blog posts:', error);
             }
         }
 
-        // Load posts when the page loads
         document.addEventListener('DOMContentLoaded', loadBlogPosts);
     </script>
     <script src="../js/improvements.js" defer></script>
