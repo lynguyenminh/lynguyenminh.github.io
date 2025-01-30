@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
     --primary-color: #0a192f;
-    --secondary-color: #64ffda;
+    --secondary-color: #64ffda !important;
     --text-primary: #ccd6f6;
     --text-secondary: #8892b0;
     --bg-primary: #0a192f;
@@ -276,13 +276,16 @@ body {
 }
 
 .btn.primary {
-    background-color: var(--secondary-color);
+    background-color: #64ffda !important;
+    background-color: var(--secondary-color) !important;
     color: var(--primary-color);
 }
 
 .btn.secondary {
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
+    border: 1px solid #64ffda !important;
+    border: 1px solid var(--secondary-color) !important;
+    color: #64ffda !important;
+    color: var(--secondary-color) !important;
 }
 
 .btn:hover {
@@ -372,6 +375,7 @@ body {
     font-weight: 500;
     border: 1px solid var(--border-color);
     z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .timeline-title {
@@ -406,11 +410,12 @@ body {
     border-color: var(--secondary-color); /* Đổi màu viền khi hover */
 }
 
-/* Thêm hiệu ứng cho các phần tử con khi hover */
+/* Update hover effect for timeline date */
 .timeline-item:hover .timeline-date {
-    background: var(--secondary-color);
-    color: var(--bg-primary);
-    border-color: var(--secondary-color);
+    background-color: #64ffda !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important; /* Change text color to dark background color */
+    border-color: var(--secondary-color) !important;
 }
 
 .timeline-item:hover .timeline-title {
