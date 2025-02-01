@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Image Style Transfer for Personal Use - Ly Nguyen Minh</title>
+    <meta name="description" content="Khám phá dự án Image to Image Style Transfer áp dụng Generative AI cho người dùng cá nhân">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/improvements.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Chỉ thay đổi CSS cho phần nội dung bài blog (.post-content), 
+           giữ nguyên phần header, footer, và các khu vực khác. */
+
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #374151;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-content h2 {
+            color: #1a1a1a;
+            margin-top: 64px;
+            margin-bottom: 32px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 12px;
+        }
+
+        .post-content h3 {
+            color: #2d3748;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .post-content p {
+            margin: 20px 0;
+            text-align: left;
+            letter-spacing: 0.3px;
+            color: #4b5563;
+        }
+
+        .post-content ul {
+            background-color: #f9fafb;
+            padding: 28px 36px;
+            margin: 28px 0;
+            border-radius: 10px;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+
+        .post-content li {
+            margin: 14px 0;
+            padding-left: 10px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .post-content li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 14px;
+        }
+
+        .post-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .highlight-box {
+            background-color: #f8fafc;
+            padding: 32px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            color: #1f2937;
+        }
+
+        .post-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .post-content blockquote {
+            margin: 36px 0;
+            padding: 28px 36px;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.6;
+            border-left: 6px solid #2563eb;
+            background-color: #f8fafc;
+            border-radius: 0 12px 12px 0;
+            color: #4b5563;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+
+        .contact-cta {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            padding: 32px;
+            margin-top: 48px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3, 123, 255, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 24px;
+                font-size: 1.05rem;
+            }
+
+            .post-content h2 {
+                font-size: 2rem;
+            }
+
+            .post-content h3 {
+                font-size: 1.4rem;
+            }
+
+            .post-content ul {
+                padding: 20px;
+            }
+
+            .highlight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="Ly Nguyen Minh Logo">
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search...">
+                </div>
+
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <article>
+            <header class="post-header">
+                <h1>Image to Image Style Transfer for Personal Use</h1>
+                <div class="post-meta">
+                    <span class="post-date">February 1, 2025</span>
+                    <span class="post-category">Project</span>
+                    <span class="post-read-time">4 minutes</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <h2>I. Tổng quan</h2>
+                <h3>1. Image to Image Style Transfer là gì?</h3>
+                <p>
+                    Image to Image Style Transfer là công nghệ dựa trên Generative AI, cho phép chuyển đổi phong cách của hình ảnh một cách linh hoạt và sáng tạo. 
+                    Kỹ thuật này giúp bạn biến tấu bức ảnh gốc, giữ lại cấu trúc ban đầu nhưng mang đến những phong cách nghệ thuật đa dạng, độc đáo.
+                </p>
+
+                <h3>2. Tiềm năng ứng dụng cho cá nhân</h3>
+                <p>
+                    Trong thời đại số, hình ảnh không chỉ là phương tiện truyền tải thông tin mà còn là cách thể hiện cá tính. 
+                    Ứng dụng chuyển đổi phong cách giúp cá nhân tạo ra những tác phẩm nghệ thuật độc đáo để chia sẻ trên mạng xã hội, blog hay portfolio cá nhân.
+                </p>
+
+                <h2>II. Dự án Image to Image Style Transfer</h2>
+                <h3>1. Đối tượng / Ngữ cảnh sử dụng</h3>
+                <p>
+                    Dự án được xây dựng dành riêng cho người dùng cá nhân, đặc biệt là những ai đam mê sáng tạo và yêu thích nghệ thuật số. 
+                    Bạn có thể dễ dàng biến tấu hình ảnh của mình theo nhiều phong cách khác nhau – từ sự bí ẩn của Halloween, nét hoạt hình Cartoon Anime, 
+                    phong cách duyên dáng của Disney đến không khí ấm áp của mùa Giáng Sinh.
+                </p>
+
+                <h3>2. Ưu và nhược điểm</h3>
+                <p><strong>Ưu điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Nhiều phong cách mới:</strong> Cập nhật liên tục theo xu hướng trending các dịp lễ lớn trong năm và các phim hoạt hình nổi tiếng, mang đến nhiều sự lựa chọn sáng tạo.
+                    </li>
+                    <li>
+                        <strong>Thời gian sinh ảnh ngắn:</strong> Quá trình chuyển đổi diễn ra nhanh chóng, giúp bạn có kết quả tức thì để chia sẻ và sử dụng.
+                    </li>
+                    <li>
+                        <strong>Tính cá nhân hóa cao:</strong> Ứng dụng được thiết kế đơn giản, dễ sử dụng và phù hợp với nhu cầu sáng tạo của từng cá nhân.
+                    </li>
+                </ul>
+
+                <p><strong>Nhược điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Kết quả phụ thuộc chất lượng ảnh gốc:</strong> Nếu bức ảnh ban đầu không đạt chuẩn, chất lượng ảnh sau khi chuyển đổi có thể bị ảnh hưởng.
+                    </li>
+                    <li>
+                        <strong>Yêu cầu tối ưu prompt:</strong> Đôi khi cần tinh chỉnh prompt để đạt được phong cách mong muốn, điều này có thể gây khó khăn cho người dùng chưa quen.
+                    </li>
+                </ul>
+
+                <h3>3. Công nghệ và Quy trình làm việc</h3>
+                <p>
+                    Dự án sử dụng các mô hình Generative AI tiên tiến kết hợp với thuật toán xử lý ảnh hiện đại, giúp chuyển đổi phong cách hình ảnh một cách mượt mà và chính xác. 
+                    Tôi liên tục nghiên cứu, cập nhật các công nghệ mới và tạo ra những prompt chất lượng cao, ổn định, nhằm đảm bảo ứng dụng hoạt động hiệu quả cho người dùng cá nhân.
+                </p>
+                <p>
+                    Các phong cách tiêu biểu được tích hợp bao gồm: Halloween, Cartoon Anime, Disney, Christmas và nhiều phong cách sáng tạo khác, mở ra cánh cửa nghệ thuật đa dạng cho mỗi người.
+                </p>
+
+                <div class="highlight-box">
+                    <p><strong>Kết luận</strong><br>
+                    Image to Image Style Transfer là công cụ mạnh mẽ giúp bạn biến tấu những bức ảnh cá nhân thành các tác phẩm nghệ thuật độc đáo. 
+                    Với công nghệ Generative AI tiên tiến và quy trình nghiên cứu tỉ mỉ, ứng dụng này mở ra không gian sáng tạo vô hạn, giúp mỗi cá nhân thể hiện phong cách riêng một cách ấn tượng.</p>
+                </div>
+            </div>
+        </article>
+
+        <div class="post-navigation">
+            <a href="index.html" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+        </div>
+
+        <!-- Add email subscription section -->
+        <section class="email-subscription">
+            <div class="subscription-content">
+                <h3>Get Latest Updates</h3>
+                <p>Leave your email to receive notifications about new posts</p>
+                <form class="subscription-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ly Nguyen Minh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/improvements.js" defer></script>
+    <script src="../js/blog-loader.js" defer></script>
+</body>
+</html>

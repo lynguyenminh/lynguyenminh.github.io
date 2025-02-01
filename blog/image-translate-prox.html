@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch thuật ảnh &amp; tài liệu scan - Ly Nguyen Minh</title>
+    <meta name="description" content="Khám phá dự án dịch thuật ảnh &amp; tài liệu scan với công nghệ AI, giữ nguyên định dạng ban đầu của tài liệu">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/improvements.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Chỉ thay đổi CSS cho phần nội dung bài blog (.post-content), 
+           giữ nguyên phần header, footer, và các khu vực khác. */
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #374151;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        .post-content h2 {
+            color: #1a1a1a;
+            margin-top: 64px;
+            margin-bottom: 32px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 12px;
+        }
+        .post-content h3 {
+            color: #2d3748;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        .post-content p {
+            margin: 20px 0;
+            text-align: left;
+            letter-spacing: 0.3px;
+            color: #4b5563;
+        }
+        .post-content ul {
+            background-color: #f9fafb;
+            padding: 28px 36px;
+            margin: 28px 0;
+            border-radius: 10px;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+        .post-content li {
+            margin: 14px 0;
+            padding-left: 10px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+        .post-content li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 14px;
+        }
+        .post-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .highlight-box {
+            background-color: #f8fafc;
+            padding: 32px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+        .highlight-box p {
+            margin: 0;
+        }
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            color: #1f2937;
+        }
+        .post-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .post-content blockquote {
+            margin: 36px 0;
+            padding: 28px 36px;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.6;
+            border-left: 6px solid #2563eb;
+            background-color: #f8fafc;
+            border-radius: 0 12px 12px 0;
+            color: #4b5563;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+        .contact-cta {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            padding: 32px;
+            margin-top: 48px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3, 123, 255, 0.3);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 24px;
+                font-size: 1.05rem;
+            }
+            .post-content h2 {
+                font-size: 2rem;
+            }
+            .post-content h3 {
+                font-size: 1.4rem;
+            }
+            .post-content ul {
+                padding: 20px;
+            }
+            .highlight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="Ly Nguyen Minh Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search...">
+                </div>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <article>
+            <header class="post-header">
+                <h1>Dịch thuật ảnh &amp; tài liệu scan</h1>
+                <div class="post-meta">
+                    <span class="post-date">February 1, 2025</span>
+                    <span class="post-category">Project</span>
+                    <span class="post-read-time">4 minutes</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <h2>I. Tổng quan</h2>
+                <h3>1. Dịch thuật ảnh &amp; tài liệu scan là gì?</h3>
+                <p>
+                    Dịch thuật ảnh và tài liệu scan là công nghệ kết hợp OCR và dịch thuật AI, cho phép chuyển đổi ngôn ngữ của văn bản có trong ảnh hay tài liệu scan. 
+                    Điểm đặc biệt của giải pháp này là khả năng giữ nguyên định dạng ban đầu như vị trí, kích thước và màu sắc của chữ, giúp tài liệu sau dịch gần như hoàn hảo so với bản gốc.
+                </p>
+
+                <h3>2. Tiềm năng ứng dụng</h3>
+                <p>
+                    Công nghệ này không chỉ hữu ích trong môi trường doanh nghiệp mà còn hỗ trợ cá nhân và học viên trong việc dịch các tài liệu, báo cáo hay sách vở, 
+                    nơi việc giữ nguyên định dạng gốc rất quan trọng để đảm bảo tính chuyên nghiệp và dễ hiểu của văn bản.
+                </p>
+
+                <h2>II. Dự án Dịch thuật ảnh &amp; tài liệu scan</h2>
+                <h3>1. Đối tượng / Ngữ cảnh sử dụng</h3>
+                <p>
+                    Dự án được phát triển nhằm phục vụ cả người dùng cá nhân lẫn các tổ chức cần dịch nhanh các tài liệu scan. 
+                    Ứng dụng này đặc biệt phù hợp cho những tài liệu có định dạng phức tạp, nơi việc giữ nguyên cấu trúc và màu sắc ban đầu là yếu tố then chốt.
+                </p>
+
+                <h3>2. Ưu và Nhược điểm</h3>
+                <p><strong>Ưu điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Hệ thống microservice:</strong> Chạy song song giúp tăng tốc độ xử lý và dịch thuật.
+                    </li>
+                    <li>
+                        <strong>Giữ được định dạng ban đầu:</strong> Vị trí, kích thước và màu sắc của chữ được bảo toàn, là điểm khác biệt hiếm có trên thị trường.
+                    </li>
+                    <li>
+                        <strong>Xử lý background phức tạp:</strong> Thuật toán tái tạo có khả năng giữ lại texture và chi tiết của ảnh nền.
+                    </li>
+                </ul>
+
+                <p><strong>Nhược điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Chữ viết tay:</strong> Đối với những chữ viết không rõ nét, chất lượng OCR và dịch thuật có thể bị ảnh hưởng.
+                    </li>
+                    <li>
+                        Khi dịch các từ ngữ chuyên sâu hoặc văn bản có độ chi tiết cao, bản dịch có thể dài hơn bản gốc, dẫn đến tràn và làm vỡ cấu trúc tài liệu.
+                    </li>
+                </ul>
+
+                <h3>3. Công nghệ và Quy trình làm việc</h3>
+                <p>
+                    Ứng dụng sử dụng công nghệ OCR tiên tiến kết hợp với hệ thống dịch thuật AI, được triển khai trên kiến trúc microservice để đảm bảo tốc độ và độ chính xác cao. 
+                    Quá trình làm việc bao gồm:
+                </p>
+                <ul>
+                    <li>Trích xuất văn bản và định vị vị trí từ ảnh scan.</li>
+                    <li>Dịch thuật nội dung bằng các mô hình AI chuyên dụng.</li>
+                    <li>Tái tạo lại tài liệu với định dạng và màu sắc ban đầu, kể cả các texture của background.</li>
+                </ul>
+                <p>
+                    Nhờ quy trình tối ưu này, ứng dụng mang lại giải pháp dịch thuật toàn diện cho các tài liệu scan, giúp người dùng tiết kiệm thời gian và công sức.
+                </p>
+
+                <div class="highlight-box">
+                    <p><strong>Kết luận</strong><br>
+                    Dịch thuật ảnh &amp; tài liệu scan là giải pháp đột phá, không chỉ nhanh chóng mà còn giữ nguyên được cấu trúc và thẩm mỹ của tài liệu gốc. 
+                    Dù còn một số thách thức nhỏ như xử lý chữ viết tai và độ dài văn bản sau dịch, công nghệ này vẫn mở ra nhiều cơ hội ứng dụng cho cả cá nhân lẫn doanh nghiệp trong thời đại số hóa.</p>
+                </div>
+            </div>
+        </article>
+
+        <div class="post-navigation">
+            <a href="index.html" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+        </div>
+
+        <!-- Add email subscription section -->
+        <section class="email-subscription">
+            <div class="subscription-content">
+                <h3>Get Latest Updates</h3>
+                <p>Leave your email to receive notifications about new posts</p>
+                <form class="subscription-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ly Nguyen Minh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/improvements.js" defer></script>
+    <script src="../js/blog-loader.js" defer></script>
+</body>
+</html>

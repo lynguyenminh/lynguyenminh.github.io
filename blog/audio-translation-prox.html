@@ -1,1 +1,281 @@
-<!-- add template here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch thuật audio - Ly Nguyen Minh</title>
+    <meta name="description" content="Khám phá dự án dịch thuật audio với công nghệ AI tiên tiến, hỗ trợ xuất file SRT và giữ nguyên character consistency trong phim">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/improvements.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Chỉ thay đổi CSS cho phần nội dung bài blog (.post-content), 
+           giữ nguyên phần header, footer, và các khu vực khác. */
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #374151;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        .post-content h2 {
+            color: #1a1a1a;
+            margin-top: 64px;
+            margin-bottom: 32px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 12px;
+        }
+        .post-content h3 {
+            color: #2d3748;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        .post-content p {
+            margin: 20px 0;
+            text-align: left;
+            letter-spacing: 0.3px;
+            color: #4b5563;
+        }
+        .post-content ul {
+            background-color: #f9fafb;
+            padding: 28px 36px;
+            margin: 28px 0;
+            border-radius: 10px;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+        .post-content li {
+            margin: 14px 0;
+            padding-left: 10px;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+        .post-content li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 14px;
+        }
+        .post-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .highlight-box {
+            background-color: #f8fafc;
+            padding: 32px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+        .highlight-box p {
+            margin: 0;
+        }
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            color: #1f2937;
+        }
+        .post-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .post-content blockquote {
+            margin: 36px 0;
+            padding: 28px 36px;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.6;
+            border-left: 6px solid #2563eb;
+            background-color: #f8fafc;
+            border-radius: 0 12px 12px 0;
+            color: #4b5563;
+            box-shadow: inset 0 0 0 1px #e5e7eb;
+        }
+        .contact-cta {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            padding: 32px;
+            margin-top: 48px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3, 123, 255, 0.3);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .post-content {
+                padding: 24px;
+                font-size: 1.05rem;
+            }
+            .post-content h2 {
+                font-size: 2rem;
+            }
+            .post-content h3 {
+                font-size: 1.4rem;
+            }
+            .post-content ul {
+                padding: 20px;
+            }
+            .highlight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="Ly Nguyen Minh Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search...">
+                </div>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <article>
+            <header class="post-header">
+                <h1>Dịch thuật audio</h1>
+                <div class="post-meta">
+                    <span class="post-date">February 1, 2025</span>
+                    <span class="post-category">Project</span>
+                    <span class="post-read-time">4 minutes</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <h2>I. Tổng quan</h2>
+                <h3>1. Dịch thuật audio là gì?</h3>
+                <p>
+                    Dịch thuật audio là công nghệ sử dụng AI để chuyển ngữ nội dung âm thanh từ phim, chương trình truyền hình hay podcast. 
+                    Giải pháp này không chỉ chuyển đổi ngôn ngữ mà còn hỗ trợ xuất file SRT chuyên dụng, giúp người dùng dễ dàng đồng bộ phụ đề khi tái sử dụng video hoặc audio.
+                </p>
+
+                <h3>2. Tiềm năng ứng dụng</h3>
+                <p>
+                    Trong thời đại số hóa, nội dung audio và video đang ngày càng được ưu tiên phát triển và chia sẻ trên các nền tảng truyền thông. 
+                    Công nghệ dịch thuật audio giúp mở rộng khả năng tiếp cận nội dung đa ngôn ngữ, đảm bảo chất lượng phụ đề, và hỗ trợ duy trì sự nhất quán trong cách xưng hô của các nhân vật trong phim.
+                </p>
+
+                <h2>II. Dự án Dịch thuật audio</h2>
+                <h3>1. Đối tượng / Ngữ cảnh sử dụng</h3>
+                <p>
+                    Dự án được thiết kế cho các cá nhân yêu thích phim ảnh, những người sáng tạo nội dung video và podcast, cũng như các chuyên gia làm phim cần phụ đề chất lượng. 
+                    Ứng dụng này hỗ trợ xuất file SRT, giúp việc đồng bộ và chỉnh sửa video trở nên dễ dàng, đồng thời đảm bảo sự nhất quán trong giao tiếp và phong cách xưng hô của nhân vật.
+                </p>
+
+                <h3>2. Ưu và Nhược điểm</h3>
+                <p><strong>Ưu điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Xuất file SRT chuyên dụng:</strong> Giúp người dùng dễ dàng import lại phụ đề vào video/audio sau khi dịch, tạo thuận lợi cho việc xem và chỉnh sửa.
+                    </li>
+                    <li>
+                        <strong>Giữ nguyên character consistency:</strong> Đặc biệt hiệu quả với dịch phim, đảm bảo các nhân vật không bị xưng hô "loạn xà ngầu" dù context có quá lớn, khắc phục hạn chế của LLM.
+                    </li>
+                    <li>
+                        Tích hợp các thuật toán tối ưu, đảm bảo chất lượng dịch và đồng bộ hóa phụ đề cho những nội dung phức tạp.
+                    </li>
+                </ul>
+
+                <p><strong>Nhược điểm</strong></p>
+                <ul>
+                    <li>
+                        <strong>Dịch chậm cho audio phim:</strong> Do thuật toán chuyên biệt xử lý ngữ cảnh phức tạp nên tốc độ dịch cho các audio phim thường chậm hơn so với các domain khác.
+                    </li>
+                    <li>
+                        Yêu cầu chất lượng âm thanh gốc phải đạt chuẩn, nếu không sẽ ảnh hưởng đến độ chính xác của bản dịch.
+                    </li>
+                </ul>
+
+                <h3>3. Công nghệ và Quy trình làm việc</h3>
+                <p>
+                    Dự án sử dụng công nghệ xử lý ngôn ngữ tự nhiên tiên tiến kết hợp với các thuật toán nhận diện giọng nói (ASR) và dịch thuật AI. 
+                    Quy trình làm việc bao gồm:
+                </p>
+                <ul>
+                    <li>Chuyển đổi audio thành văn bản bằng công nghệ ASR chính xác.</li>
+                    <li>Dịch thuật nội dung văn bản bằng các mô hình AI chuyên sâu.</li>
+                    <li>Xuất file SRT với định dạng chuyên dụng, đảm bảo đồng bộ với video/audio gốc.</li>
+                    <li>Kiểm tra và tinh chỉnh phụ đề nhằm giữ nguyên character consistency, đặc biệt với nội dung phim có context lớn.</li>
+                </ul>
+                <p>
+                    Nhờ quy trình này, dự án mang lại trải nghiệm dịch thuật audio chất lượng cao, đáp ứng nhu cầu đa dạng của người dùng từ cá nhân đến chuyên gia làm phim.
+                </p>
+
+                <div class="highlight-box">
+                    <p><strong>Kết luận</strong><br>
+                    Dịch thuật audio không chỉ giúp mở rộng khả năng tiếp cận nội dung đa ngôn ngữ mà còn tạo điều kiện thuận lợi cho việc chỉnh sửa và tái sử dụng video/audio thông qua xuất file SRT chuyên dụng. 
+                    Mặc dù tốc độ dịch cho audio phim có thể chậm hơn do tính phức tạp của thuật toán, nhưng sự nhất quán trong cách xưng hô và chất lượng phụ đề là những ưu điểm nổi bật, góp phần nâng cao trải nghiệm của người dùng.</p>
+                </div>
+            </div>
+        </article>
+
+        <div class="post-navigation">
+            <a href="index.html" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+        </div>
+
+        <!-- Add email subscription section -->
+        <section class="email-subscription">
+            <div class="subscription-content">
+                <h3>Get Latest Updates</h3>
+                <p>Leave your email to receive notifications about new posts</p>
+                <form class="subscription-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ly Nguyen Minh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/improvements.js" defer></script>
+    <script src="../js/blog-loader.js" defer></script>
+</body>
+</html>
